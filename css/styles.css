@@ -1,0 +1,162 @@
+/*Хэдер - 7, Футер - 33, Главная страница - 70, Портфолио - 130*/
+
+body {
+  font-family: Roboto, sans-serif;
+}
+
+/*Хэдер*/
+
+.site-nav a,
+.site-nav a:visited {
+  color: #212121;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+}
+
+.site-nav a:hover,
+.site-nav a:focus {
+  color: #2196f3;
+}
+
+.contacts-nav-link,
+.contacts-nav-link:visited {
+  color: #757575;
+}
+
+.contacts-nav-link:hover,
+.contacts-nav-link:focus {
+  color: #2196f3;
+}
+
+/*Футер*/
+
+.site-footer {
+  background: #2f303a;
+}
+
+.footer-title {
+  font-family: 'Raleway';
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 31px;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+}
+
+.title-other-color {
+  color: #2196f3;
+}
+
+.company-address {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+}
+
+.contacts-foot-link,
+.contacts-foot-link:visited {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/*Главная страница*/
+
+.landing-section {
+  background-color: #2f303a;
+}
+.main-title {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 60px;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.order-button {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  background: #2196f3;
+}
+
+.advantage-name {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #212121;
+}
+
+.advantage-desc {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: #757575;
+}
+
+.employee-name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.03em;
+  color: #212121;
+}
+
+.position {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.03em;
+  color: #757575;
+}
+
+/*Портфолио*/
+
+.filter-button {
+  background: #f5f4fa;
+  color: #212121;
+}
+
+.filter-button:hover,
+.filter-button:focus {
+  background: #2196f3;
+  color: #ffffff;
+}
+
+.projects-link,
+.projects-link:visited {
+  text-decoration: none;
+}
+
+.project-name {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 36px;
+  letter-spacing: 0.06em;
+  color: #212121;
+}
+
+.project-type {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.03em;
+  color: #757575;
+}
