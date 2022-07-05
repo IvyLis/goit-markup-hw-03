@@ -353,10 +353,15 @@ body {
 
 .flexelem {
   margin-right: 30px;
+  margin-bottom: 30px;
 }
 
 .flexelem:nth-child(3n) {
   margin-right: 0;
+}
+
+.flexelem:nth-last-child(3n) {
+  margin-bottom: 0;
 }
 
 .project-name {
