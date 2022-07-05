@@ -1,42 +1,118 @@
 /*Хэдер - 7, Футер - 33, Главная страница - 70, Портфолио - 130*/
+/*Убрать потом outline!*/
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+:root {
+  --blackColor: #212121;
+  --lightBlackColor: #757575;
+  --blueColor: #2196f3;
+}
 
 body {
   font-family: Roboto, sans-serif;
 }
 
-/*Хэдер*/
+.container {
+  width: 1200px;
+  margin: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
 
-.site-nav a,
-.site-nav a:visited {
-  color: #212121;
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.link {
+  text-decoration: none;
+}
+
+/*Хэдер*/
+.page-header {
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+}
+
+.site-nav {
+  display: flex;
+  margin-left: 93px;
+}
+
+.site-nav-li .link,
+.site-nav-li .link:visited {
+  color: var(--blackColor);
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.02em;
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  /* margin-right: 50px; */
 }
 
-.site-nav a:hover,
-.site-nav a:focus {
-  color: #2196f3;
+/* .site-nav-li:last-child {
+  margin-right: 0;
+} */
+
+.site-nav-li + .site-nav-li {
+  margin-left: 50px;
+}
+
+.site-nav-li .link:hover,
+.site-nav-li .link:focus {
+  color: var(--blueColor);
+}
+
+.contacts-nav {
+  display: flex;
+  margin-left: auto;
+}
+
+.contacts-nav .item + .item {
+  margin-left: 50px;
 }
 
 .contacts-nav-link,
 .contacts-nav-link:visited {
-  color: #757575;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  color: var(--lightBlackColor);
+  text-decoration: none;
 }
 
 .contacts-nav-link:hover,
 .contacts-nav-link:focus {
-  color: #2196f3;
+  color: var(--blueColor);
 }
 
 /*Футер*/
 
 .site-footer {
   background: #2f303a;
+  padding-bottom: 60px;
+  padding-top: 60px;
 }
 
 .footer-title {
+  margin-top: 0;
+  margin-bottom: 20px;
   font-family: 'Raleway';
   font-weight: 700;
   font-size: 26px;
@@ -46,10 +122,13 @@ body {
 }
 
 .title-other-color {
-  color: #2196f3;
+  color: var(--blueColor);
 }
 
 .company-address {
+  margin-top: 0;
+  margin-bottom: 9px;
+  min-width: 231px;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -60,6 +139,7 @@ body {
 
 .contacts-foot-link,
 .contacts-foot-link:visited {
+  margin-bottom: 60px;
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
@@ -73,6 +153,7 @@ body {
   background-color: #2f303a;
 }
 .main-title {
+  margin-top: 0;
   font-weight: 900;
   font-size: 44px;
   line-height: 60px;
@@ -80,64 +161,183 @@ body {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #ffffff;
+  margin-bottom: 30px;
 }
 
 .order-button {
+  border-radius: 4px;
   font-weight: 700;
   font-size: 16px;
   line-height: 30px;
-  display: flex;
-  align-items: center;
-  text-align: center;
   letter-spacing: 0.06em;
   color: #ffffff;
-  background: #2196f3;
+  text-align: center;
+  padding: 10px 32px;
+  min-width: 200px;
+  background: var(--blueColor);
+}
+
+.about-us {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.our-advantages {
+  margin-bottom: 94px;
+  width: 270px;
+  display: flex;
+}
+
+.our-advantages .item + .item {
+  margin-left: 30px;
+}
+
+.our-advantages .item {
+  min-width: 270px;
 }
 
 .advantage-name {
+  /* width: 270px; */
+  margin-top: 0;
+  margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #212121;
+  color: var(--blackColor);
 }
 
 .advantage-desc {
+  margin-top: 0;
+  margin-bottom: 10px;
+  /* width: 270px; */
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 0.03em;
-  color: #757575;
+  color: var(--lightBlackColor);
+}
+
+.side-section-title {
+  margin-top: 0;
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--blackColor);
+}
+
+.our-work-img {
+  display: flex;
+}
+
+.our-work-img .item + .item {
+  margin-left: 30px;
+}
+
+.our-team {
+  background: #f5f4fa;
+}
+
+.side-section-title.moved {
+  padding-top: 94px;
+  margin-top: 0;
+  margin-bottom: 50px;
+  /* font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--blackColor); */
+}
+
+.employees {
+  display: flex;
+  padding-bottom: 94px;
+}
+
+.employees .item + .item {
+  margin-left: 30px;
+}
+
+.employee-photo {
+  margin-bottom: 30px;
 }
 
 .employee-name {
+  margin-top: 0;
+  margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
   letter-spacing: 0.03em;
-  color: #212121;
+  color: var(--blackColor);
 }
 
 .position {
+  margin-top: 0;
+  margin-bottom: 30px;
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
   letter-spacing: 0.03em;
-  color: #757575;
+  color: var(--lightBlackColor);
 }
 
 /*Портфолио*/
 
+.filters {
+  padding-top: 94px;
+}
+
+.list-of-filters {
+  display: flex;
+  justify-content: center;
+}
+
+.list-of-filters .item + .item {
+  margin-left: 8px;
+}
+
 .filter-button {
   background: #f5f4fa;
-  color: #212121;
+  color: var(--blackColor);
+  padding: 6px 22px;
+  border: 0px;
+  border-radius: 4px;
 }
 
 .filter-button:hover,
 .filter-button:focus {
-  background: #2196f3;
+  background: var(--blueColor);
   color: #ffffff;
+}
+
+.filter-button.all {
+  min-width: 73px;
+}
+
+.filter-button.web {
+  min-width: 128px;
+}
+
+.filter-button.apps {
+  min-width: 145px;
+}
+
+.filter-button.dsgn {
+  min-width: 103px;
+}
+
+.filter-button.mrktng {
+  min-width: 130px;
+}
+
+.list-of-filters {
+  margin-bottom: 50px;
 }
 
 .projects-link,
@@ -145,18 +345,36 @@ body {
   text-decoration: none;
 }
 
+.list-of-projects {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 94px;
+}
+
+.flexelem {
+  margin-right: 30px;
+}
+
+.flexelem:nth-child(3n) {
+  margin-right: 0;
+}
+
 .project-name {
+  margin-top: 0;
+  margin-bottom: 4px;
   font-weight: 700;
   font-size: 18px;
   line-height: 36px;
   letter-spacing: 0.06em;
-  color: #212121;
+  color: var(--blackColor);
 }
 
 .project-type {
+  margin-top: 0;
+  margin-bottom: 0;
   font-weight: 400;
   font-size: 16px;
   line-height: 30px;
   letter-spacing: 0.03em;
-  color: #757575;
+  color: var(--lightBlackColor);
 }
